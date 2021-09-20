@@ -25,5 +25,6 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path("blog/", include("blog.urls")),
     path("grid/", include("grid.urls")),
+    path('project/', include('project.urls')),
     path("", lambda request: redirect("/home/")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
