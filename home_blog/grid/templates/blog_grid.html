@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="utf-8">
-    <title>iDESIGN - Interior Design HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-    <link href="img/favicon.ico" rel="icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
+{% block blog_grid %}
 
 <div class="container-fluid bg-dark py-3">
         <div class="container">
@@ -144,7 +129,7 @@
             <div class="row pb-3">
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-1.jpg" alt="">
+                        <img class="card-img-top" src="{% static "img/blog-1.jpg" %}" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
@@ -161,7 +146,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-2.jpg" alt="">
+                        <img class="card-img-top" src="{% static "img/blog-2.jpg" %}" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
@@ -178,7 +163,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-3.jpg" alt="">
+                        <img class="card-img-top" src="{% static "img/blog-3.jpg" %}" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
@@ -195,7 +180,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-2.jpg" alt="">
+                        <img class="card-img-top" src="{% static "img/blog-2.jpg" %}" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
@@ -212,7 +197,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-3.jpg" alt="">
+                        <img class="card-img-top" src="{% static "img/blog-3.jpg" %}" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
@@ -229,7 +214,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-1.jpg" alt="">
+                        <img class="card-img-top" src="{% static "img/blog-1.jpg" %}" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
@@ -326,16 +311,20 @@
         </div>
 </div>
 
-<a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-    <script src="js/main.js"></script>
-</body>
 
-</html>
+<a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <script src="{% static "https://code.jquery.com/jquery-3.4.1.min.js" %}"></script>
+    <script src="{% static "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "lib/easing/easing.min.js" %}"></script>
+    <script src="{% static "lib/owlcarousel/owl.carousel.min.js" %}"></script>
+    <script src="{% static "lib/isotope/isotope.pkgd.min.js" %}"></script>
+    <script src="{% static "lib/lightbox/js/lightbox.min.js" %}"></script>
+    <script src="{% static "mail/jqBootstrapValidation.min.js" %}"></script>
+    <script src="{% static "mail/contact.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+
+
+{% endblock blog_grid  %}
+{% block under_nav %}{% endblock under_nav %}
