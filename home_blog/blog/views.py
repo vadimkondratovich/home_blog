@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def blog_detail(request):
-    return render(request, "blog_detail.html", {})
+def blog_page(request):
+    return render(request, "all_blogs.html", {})
