@@ -28,7 +28,12 @@ class User(AbstractUser):
 
     
     def show_image(self):
-        return mark_safe('<img src="{}" width="50px" />'.format("https://photoclub.by/images/main50/508789_main.jpg"))
+        return mark_safe('<img src="{}" width="50px" />'.format(
+            "https://photoclub.by/images/main50/508789_main.jpg"
+            )
+        )
+
+        
     show_image.short_description = "Avatar"
     show_image.allow_tags = True
 
