@@ -16,8 +16,11 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="{% url 'all_blogs' %}" class="dropdown-item">Blog Detail</a>
+                                <a href="{% url 'blogs_page' %}" class="dropdown-item">Blog Detail</a>
                                 <a href="{% url 'blog_grid' %}" class="dropdown-item">Blog Grid</a>
+                                {% if not user.is_anonymous %}
+                                <a class="dropdown-item" href="{% url 'create_post_page' %}">Add New Post</a>
+                                {%endif%}
                             </div>
                         </div>
                         <a href={% url 'contact_page' %} class="nav-item nav-link">Contact</a>
@@ -25,8 +28,8 @@
                         <a href="{% url 'signin_page' %}" class="nav-item nav-link">Sign In</a>
                         <a href="{% url 'login_page' %}" class="nav-item nav-link">Log In</a>
                         {% else %}
-                        <a href="/admin/">{{user.username}}</a>
-                        <a href="{% url 'logout_page' %}">Log Out</a>
+                        <a href="/admin/">{{user.username}} class="nav-item nav-link">Admin</a>
+                        <a href="{% url 'logout_page' %}" class="nav-item nav-link">Log Out</a>
                         {% endif %}
                     </div>
                 </div>
